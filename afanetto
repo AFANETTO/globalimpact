@@ -9,8 +9,6 @@
     "import numpy as np\n",
     "import cv2\n",
     "\n",
-    "ESC_KEY = 27\n",
-    "\n",
     "cap = cv2.VideoCapture(1)"
    ]
   },
@@ -28,10 +26,6 @@
     "    if hue[\"min\"] > hue[\"max\"]:\n",
     "        cv2.setTrackbarPos(\"Max Hue\", trackbarWindow, hue[\"min\"])\n",
     "        hue[\"max\"] = cv2.getTrackbarPos(\"Max Hue\", trackbarWindow)\n",
-    "    \n",
-    "    sat = {}\n",
-    "    sat[\"min\"] = cv2.getTrackbarPos(\"Min Saturation\", trackbarWindow)\n",
-    "    sat[\"max\"] = cv2.getTrackbarPos(\"Max Saturation\", trackbarWindow)\n",
     "    \n",
     "    if sat[\"min\"] > sat[\"max\"]:\n",
     "        cv2.setTrackbarPos(\"Max Saturation\", trackbarWindow, sat[\"min\"])\n",
@@ -150,14 +144,7 @@
    "codemirror_mode": {
     "name": "ipython",
     "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.7.5"
-  }
+   }
  },
  "nbformat": 4,
  "nbformat_minor": 4
